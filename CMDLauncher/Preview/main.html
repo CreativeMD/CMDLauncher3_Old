@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Main</title>
+	<link rel="stylesheet" href="style.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <link rel="stylesheet" href="cssprogress.min.css" />
+</head>
+<body>
+<div class="instance button"><img src="https://minecraft.net/static/pages/img/index-hero-og.088fb7996b03.jpg" style="max-width: 140; max-height: 80; margin-bottom: 4px; border-radius: 2px; box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 2px 2px 0px 0 rgba(0,0,0,0.19);">The Briefcase II</div>
+<table width="100%">
+<tr>
+<td><hr width="20" class="instance_group"></td>
+<td class="unclickable" style="color: darkblue; font-size: 14pt">Forge</td>
+<td width="100%"><hr class="instance_group"></td>
+<td><click>+</click></td>
+</tr>
+</table>
+<div class="cssProgress">
+  <div class="progress2">
+	<div class="cssProgress-bar cssProgress-success cssProgress-active" id="progressbar" data-percent="65" style="width: 65%;">
+	<span class="cssProgress-label" id="progressbar_text">65%</span>
+	</div>
+  </div>
+</div>
+  <script>
+  setInterval(function() {
+  var value = Math.round(Math.random()*100);
+    $('#progressbar').css('width', value+'%').attr("data-percent", value);
+	$('#progressbar_text').text(value + '%');
+}, 1000);
+</script>
+</body>
+</html>

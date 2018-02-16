@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMDLauncher.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,14 @@ namespace CMDLauncher
         [STAThread]
         static void Main()
         {
+            Core.InitCore();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Core.PostInit();
+
+            Application.Run(new LoadingScreen(Startup.GetStartupTasks(), "startup", "Starting ...").Build());
         }
     }
 }
